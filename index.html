@@ -3,9 +3,282 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>project-0adf981769695153741</title>
+    <title>Premier Football Store</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f4f4f4;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+        header {
+            background: #35424a;
+            color: #ffffff;
+            padding-top: 30px;
+            min-height: 70px;
+            border-bottom: #e8491d 3px solid;
+        }
+        header a {
+            color: #ffffff;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 16px;
+        }
+        header li {
+            float: left;
+            display: inline;
+            padding: 0 20px 0 20px;
+        }
+        header #branding {
+            float: left;
+        }
+        header #branding h1 {
+            margin: 0;
+        }
+        header nav {
+            float: right;
+            margin-top: 10px;
+        }
+        header .highlight, header .current a {
+            color: #e8491d;
+            font-weight: bold;
+        }
+        header a:hover {
+            color: #cccccc;
+            font-weight: bold;
+        }
+        #showcase {
+            min-height: 400px;
+            background: url('football.png') no-repeat center center/cover;
+            text-align: center;
+            color: #ffffff;
+            position: relative;
+        }
+        #showcase::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+        }
+        #showcase h1 {
+            position: relative;
+            margin-top: 100px;
+            font-size: 55px;
+            margin-bottom: 10px;
+        }
+        #showcase p {
+            position: relative;
+            font-size: 20px;
+        }
+        #newsletter {
+            padding: 15px;
+            color: #ffffff;
+            background: #35424a;
+        }
+        #newsletter h1 {
+            float: left;
+        }
+        #newsletter form {
+            float: right;
+            margin-top: 15px;
+        }
+        #newsletter input[type="email"] {
+            padding: 4px;
+            height: 25px;
+            width: 250px;
+        }
+        .button_1 {
+            height: 38px;
+            background: #e8491d;
+            border: 0;
+            padding-left: 20px;
+            padding-right: 20px;
+            color: #ffffff;
+        }
+        #boxes {
+            margin-top: 20px;
+        }
+        #boxes .box {
+            float: left;
+            width: 30%;
+            padding: 10px;
+            text-align: center;
+        }
+        #boxes .box img {
+            width: 90px;
+            height: 90px;
+        }
+        aside#sidebar {
+            float: right;
+            width: 30%;
+            margin-top: 10px;
+        }
+        aside#sidebar .quote input, aside#sidebar .quote textarea {
+            width: 90%;
+            padding: 5px;
+        }
+        .article-container {
+            width: 65%;
+            float: left;
+            margin-top: 10px;
+        }
+        footer {
+            padding: 20px;
+            margin-top: 20px;
+            color: #ffffff;
+            background-color: #e8491d;
+            text-align: center;
+        }
+        /* Icons */
+        .icon-ball::before {
+            content: '⚽';
+            font-size: 2em;
+            display: block;
+            margin-bottom: 10px;
+        }
+        .icon-trophy::before {
+            content: '🏆';
+            font-size: 2em;
+            display: block;
+            margin-bottom: 10px;
+        }
+        .icon-field::before {
+            content: '⚽';
+            font-size: 2em;
+            display: block;
+            margin-bottom: 10px;
+        }
+        /* Responsive */
+        @media(max-width: 768px) {
+            header #branding,
+            header nav,
+            header nav li,
+            #newsletter h1,
+            #newsletter form,
+            #boxes .box,
+            article#main-col,
+            aside#sidebar {
+                float: none;
+                text-align: center;
+                width: 100%;
+            }
+            header {
+                padding-bottom: 20px;
+            }
+            #showcase h1 {
+                margin-top: 40px;
+            }
+            #newsletter button, .quote button {
+                display: block;
+                width: 100%;
+            }
+            #newsletter form input[type="email"], .quote input, .quote textarea {
+                width: 100%;
+                margin-bottom: 5px;
+            }
+        }
+    </style>
 </head>
 <body>
-    <!-- Blank white page -->
+    <header>
+        <div class="container">
+            <div id="branding">
+                <h1><span class="highlight">Premier</span> Football Store</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#" class="current">Home</a></li>
+                    <li><a href="#">Products</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="showcase">
+        <div class="container">
+            <h1>The Ultimate Football Experience</h1>
+            <p>Discover premium footballs for every level of play</p>
+        </div>
+    </section>
+
+    <section id="newsletter">
+        <div class="container">
+            <h1>Subscribe To Our Newsletter</h1>
+            <form>
+                <input type="email" placeholder="Enter Email...">
+                <button type="submit" class="button_1">Subscribe</button>
+            </form>
+        </div>
+    </section>
+
+    <section id="main">
+        <div class="container">
+            <article id="main-col">
+                <h1 class="page-title">About Football</h1>
+                <p>Football, also known as soccer in some regions, is the world's most popular sport. Our store offers a wide range of high-quality footballs designed for professional players, amateur enthusiasts, and training purposes.</p>
+                <p class="dark">From official match balls to training equipment, we provide products that meet international standards and enhance performance on the field.</p>
+            </article>
+
+            <aside id="sidebar">
+                <div class="dark">
+                    <h3>Get A Quote</h3>
+                    <form class="quote">
+                        <div>
+                            <label>Name</label><br>
+                            <input type="text" placeholder="Name">
+                        </div>
+                        <div>
+                            <label>Email</label><br>
+                            <input type="email" placeholder="Email Address">
+                        </div>
+                        <div>
+                            <label>Message</label><br>
+                            <textarea placeholder="Message"></textarea>
+                        </div>
+                        <button class="button_1" type="submit">Send</button>
+                    </form>
+                </div>
+            </aside>
+        </div>
+    </section>
+
+    <section id="boxes">
+        <div class="container">
+            <div class="box">
+                <i class="icon-ball"></i>
+                <h3>Premium Balls</h3>
+                <p>Official size and weight footballs for professional matches</p>
+            </div>
+            <div class="box">
+                <i class="icon-trophy"></i>
+                <h3>Championship Quality</h3>
+                <p>Designed for the highest level of competition</p>
+            </div>
+            <div class="box">
+                <i class="icon-field"></i>
+                <h3>All Field Types</h3>
+                <p>Suitable for grass, turf, and indoor surfaces</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>Premier Football Store, Copyright &copy; 2024</p>
+    </footer>
 </body>
 </html>
